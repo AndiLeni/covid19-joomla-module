@@ -1,0 +1,1 @@
+{"cases":"35,9","last_update":"29.05.2021, 00:00 Uhr","BEZ":"Landkreis","GEN":"Augsburg"}

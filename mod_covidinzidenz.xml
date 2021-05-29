@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>RKI Covid-19 Inzidenz</name>
+    <author>Andreas Lenhardt</author>
+    <version>1.1.4</version>
+    <description>Zeigt die aktuelle Corona Inzidenz, für das Gantry Framework 5 ausgelegt.</description>
+    <files>
+        <filename>mod_covidinzidenz.xml</filename>
+        <filename module="mod_covidinzidenz">mod_covidinzidenz.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                name="id"
+                type="text"
+                default="0"
+                label="Bezirks ID angeben, siehe https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0/about"
+            />
+        </fieldset>
+    </fields>
+    </config>
+</extension>
