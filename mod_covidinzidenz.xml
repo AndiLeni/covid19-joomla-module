@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>RKI Covid-19 Inzidenz</name>
     <author>Andreas Lenhardt</author>
-    <version>1.1.4</version>
+    <version>1.1.8</version>
     <description>Zeigt die aktuelle Corona Inzidenz, für das Gantry Framework 5 ausgelegt.</description>
     <files>
         <filename>mod_covidinzidenz.xml</filename>

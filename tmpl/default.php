@@ -2,6 +2,22 @@
 // No direct access
 defined('_JEXEC') or die;
 
+$num_cases = intval($api_data["cases"]);
+
+if ($num_cases < 50) {
+    $color = '#198754';
+    $color_bg = '#d1e7dd';
+} elseif (50 <= $num_cases && $num_cases < 100) {
+    $color = '#ffc107';
+    $color_bg = '#fff3cd';
+} elseif (100 <= $num_cases) {
+    $color = '#dc3545';
+    $color_bg = '#f8d7da';
+} else {
+    $color = '#6c757d';
+    $color_bg = '#fff';
+}
+
 ?>
 
 <div class="g-grid">
@@ -25,6 +41,6 @@ defined('_JEXEC') or die;
         </p>
     </div>
     <div class="g-block size-50" style="display: flex; align-items: center; justify-content: center;">
-        <p style="font-size: 4rem; padding: 2rem; border: 2px solid lightgray; border-radius: 10px"> <?php echo $api_data["cases"] ?> </p>
+        <p style="font-size: 4rem; padding: 2rem; border: 6px solid <?php echo $color ?>; border-radius: 10px; background-color: <?php echo $color_bg ?>"> <?php echo $api_data["cases"] ?> </p>
     </div>
 </div>
