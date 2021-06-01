@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>RKI Covid-19 Inzidenz</name>
     <author>Andreas Lenhardt</author>
-    <version>1.1.8</version>
+    <version>2.0.1</version>
     <description>Zeigt die aktuelle Corona Inzidenz, für das Gantry Framework 5 ausgelegt.</description>
     <files>
         <filename>mod_covidinzidenz.xml</filename>
@@ -19,7 +19,7 @@
                 name="id"
                 type="text"
                 default="0"
-                label="Bezirks ID angeben, siehe https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0/about"
+                label="Allgemeiner Gemeindeschlüssel"
             />
         </fieldset>
     </fields>
