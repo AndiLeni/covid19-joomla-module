@@ -1,1 +1,0 @@
-{"cases":"33,1","last_update":"01.06.2021, 00:00 Uhr","BEZ":"Landkreis","GEN":"Augsburg","history":[38.2,35.9,29.1,34.3]}

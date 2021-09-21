@@ -4,6 +4,7 @@
  * Module Entry Point
  */
 
+
 // No direct access
 defined('_JEXEC') or die;
 
@@ -22,16 +23,16 @@ $bezirk_id = $params->get('id', '0');
 
 
 // read data from file, is faster than making api request each time
-$data = file_get_contents(__DIR__ . '/data.txt');
+$data = file_get_contents(__DIR__ . '/data.json');
 
 if ($data !== false) {
-    $data = json_decode($data, FALSE);
+    $data = json_decode($data, true);
 
-    $data_time = date_create_from_format('d.m.Y\, H:i \U\h\r', $data->last_update);
-    $data_time = $data_time->format('d.m.Y');
-    $now = date('d.m.Y');
+    // $data_time = date_create_from_format('d.m.Y\, H:i \U\h\r', $data->last_update);
+    $data_time = date_create_from_format('d.m.Y', $data['last_update']);
+    $now = new DateTime();
 
-    if (strtotime($data_time) < strtotime($now)) {
+    if ($data_time->format('d') != $now->format('d')) {
         // make api request
         $api_data = CovidInzidenzHelper::getData($bezirk_id);
     } else {
@@ -42,6 +43,7 @@ if ($data !== false) {
     // make api request
     $api_data = CovidInzidenzHelper::getData($bezirk_id);
 }
+
 
 
 require JModuleHelper::getLayoutPath('mod_covidinzidenz');
