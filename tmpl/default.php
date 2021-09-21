@@ -65,7 +65,7 @@ function get_color_bg($num_cases)
     }
 
     #mod_covidinzidenz_yellow_light>.mod_covidinzidenz_light_bright {
-        background-color: #ffff00;
+        background-color: #f9f900;
     }
 
     #mod_covidinzidenz_green_light>.mod_covidinzidenz_light_bright {
@@ -77,7 +77,7 @@ function get_color_bg($num_cases)
     }
 
     #mod_covidinzidenz_yellow_light>.mod_covidinzidenz_light_fade {
-        background-color: #fefecc;
+        background-color: #ffffbd;
     }
 
     #mod_covidinzidenz_green_light>.mod_covidinzidenz_light_fade {
@@ -123,9 +123,9 @@ function get_color_bg($num_cases)
             if ($api_data['ampel_color'] == 'red') {
                 echo '
             <ul style="margin: 0;">
-                <li id="mod_covidinzidenz_red_light" class="mod_covidinzidenz_traffic_light_box">
+                <li id="mod_covidinzidenz_red_light" class="mod_covidinzidenz_traffic_light_box mod_covidinzidenz_traffic_light_box_active">
                     <div class="mod_covidinzidenz_light mod_covidinzidenz_light_bright"></div>
-                    <div class="mod_covidinzidenz_text"></div>
+                    <div class="mod_covidinzidenz_text">ROT</div>
                 </li>
 
                 <li id="mod_covidinzidenz_yellow_light" class="mod_covidinzidenz_traffic_light_box">
@@ -133,11 +133,9 @@ function get_color_bg($num_cases)
                     <div class="mod_covidinzidenz_text"></div>
                 </li>
 
-                <li id="mod_covidinzidenz_green_light" class="mod_covidinzidenz_traffic_light_box mod_covidinzidenz_traffic_light_box_active">
+                <li id="mod_covidinzidenz_green_light" class="mod_covidinzidenz_traffic_light_box">
                     <div class="mod_covidinzidenz_light mod_covidinzidenz_light_fade"></div>
-                    <div class="mod_covidinzidenz_text">
-                        GRÜN
-                    </div>
+                    <div class="mod_covidinzidenz_text"></div>
                 </li>
             </ul>
             ';
@@ -151,16 +149,14 @@ function get_color_bg($num_cases)
                     <div class="mod_covidinzidenz_text"></div>
                 </li>
 
-                <li id="mod_covidinzidenz_yellow_light" class="mod_covidinzidenz_traffic_light_box">
+                <li id="mod_covidinzidenz_yellow_light" class="mod_covidinzidenz_traffic_light_box mod_covidinzidenz_traffic_light_box_active">
                     <div class="mod_covidinzidenz_light mod_covidinzidenz_light_bright"></div>
-                    <div class="mod_covidinzidenz_text"></div>
+                    <div class="mod_covidinzidenz_text">GELB</div>
                 </li>
 
-                <li id="mod_covidinzidenz_green_light" class="mod_covidinzidenz_traffic_light_box mod_covidinzidenz_traffic_light_box_active">
+                <li id="mod_covidinzidenz_green_light" class="mod_covidinzidenz_traffic_light_box">
                     <div class="mod_covidinzidenz_light mod_covidinzidenz_light_fade"></div>
-                    <div class="mod_covidinzidenz_text">
-                        GRÜN
-                    </div>
+                    <div class="mod_covidinzidenz_text"></div>
                 </li>
             </ul>
             ';
@@ -181,9 +177,7 @@ function get_color_bg($num_cases)
 
                 <li id="mod_covidinzidenz_green_light" class="mod_covidinzidenz_traffic_light_box mod_covidinzidenz_traffic_light_box_active">
                     <div class="mod_covidinzidenz_light mod_covidinzidenz_light_bright"></div>
-                    <div class="mod_covidinzidenz_text">
-                        GRÜN
-                    </div>
+                    <div class="mod_covidinzidenz_text">GRÜN</div>
                 </li>
             </ul>
             ';
